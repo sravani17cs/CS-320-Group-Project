@@ -1,12 +1,39 @@
-  body {
-    color: darkblue;
+body {
     font-family: 'Open Sans', sans-serif;
-    margin: 10px 50px 10px 50px;
-    background-color: #4dff1a;
-  }
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #ffdcaa;
+}
 
-  p {
+.topmenu.topbar {
+    box-shadow: none;
+    border: none;
+    background-color: tan;
+    padding-top: 5px;
+    height: 45px;
+}
+
+.header-text {
+    font-family: Calligraphic;
+    font-size: x-large;
+    text-align: center;
+    color: black;
+}
+
+.home {
+    font-family: Georgia;
+    font-size: medium;
+    text-align: left;
+}
+
+.login-logout {
+    font-family: Georgia;
+    font-size: medium;
+    text-align: right;
+}
+
+p {
     font-size: larger;
     color: darkblue;
-  }
+}
 
