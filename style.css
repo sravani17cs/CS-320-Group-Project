@@ -16,17 +16,19 @@ body {
 .header-text {
     font-family: Calligraphic;
     font-size: x-large;
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
     color: black;
 }
 
-.home {
-    font-family: Georgia;
-    font-size: medium;
-    text-align: left;
-    padding-top: 17px;
-    padding-left: 3px;
-}
+/*.home {*/
+    /*font-family: Georgia;*/
+    /*font-size: medium;*/
+    /*text-align: left;*/
+    /*padding-top: 17px;*/
+    /*padding-left: 3px;*/
+/*}*/
 
 .login-logout {
     font-family: Georgia;
@@ -34,6 +36,13 @@ body {
     text-align: right;
     padding-top: 17px;
     padding-right: 3px;
+}
+
+.help {
+    font-family: Georgia;
+    font-size: medium;
+    text-align: right;
+    padding-top: 17px;
 }
 
 p {
