@@ -6,8 +6,8 @@ body {
 }
 
 .topmenu.topbar {
-    box-shadow: black;
-    border: black;
+    box-shadow: none;
+    border: solid black;
     background-color: tan;
     padding-top: 5px;
     height: 45px;
@@ -45,6 +45,29 @@ body {
     padding-top: 17px;
 }
 
+.information-box {
+    height: 200px;
+    color: black;
+    box-shadow: none;
+    border: solid black;
+}
+
+.threads {
+    height: 1500px;
+    color: black;
+    box-shadow: none;
+    border: solid black;
+}
+
+.frame {
+    border: solid black;
+    background-color: #ffdcaa;
+}
+
+.footer {
+    background-color: black;
+    color: black;
+}
 p {
     font-size: larger;
     color: darkblue;
