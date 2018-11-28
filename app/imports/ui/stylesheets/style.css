@@ -3,6 +3,7 @@ body {
   margin-left: 200px;
   margin-right: 200px;
   background-color: #b6986d;
+  border: double black;
 }
 
 .header-menu {
@@ -13,8 +14,14 @@ body {
   box-shadow: none;
 }
 
+.ui.middle.aligned.centered.grid.text.container {
+  width: 100%;
+  margin-bottom: 0;
+}
+
 .login-link-text {
   color: white !important;
+  text-decoration: none !important;
 }
 
 .ui.positive.buttons .button, .ui.positive.button {
@@ -59,8 +66,17 @@ body {
   box-shadow: none;
   border: none;
 }
+
 .ui.text.container {
-  max-width: 1200px !important;
+  max-width: 3000px !important;
   padding-left: 0;
   padding-right: 0;
+}
+
+.ui.grid.container {
+  width: 100% !important;
+}
+
+.ui.container {
+  width: 100% !important;
 }
