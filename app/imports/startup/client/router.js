@@ -29,6 +29,13 @@ FlowRouter.route('/stuff/:_id', {
   },
 });
 
+FlowRouter.route('/thread/:_id', {
+  name: 'Thread_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Thread_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });

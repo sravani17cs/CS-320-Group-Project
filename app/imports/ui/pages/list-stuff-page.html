@@ -7,7 +7,6 @@
             <th>Title</th>
             <th>Author</th>
             <th>Date Posted</th>
-            <th>Content (temp for now)</th>
             {{#If_Logged_In}}
               <th>Edit</th>
             {{/If_Logged_In}}
@@ -17,10 +16,9 @@
           <tbody>
           {{#each thread in threadList}}
             <tr>
-              <td>{{thread.title}}</td>
+              <td><a href="{{pathFor 'Thread_Page' _id=thread._id}}">{{thread.title}}</a></td>
               <td>{{thread.author}}</td>
               <td>{{thread.date}}</td>
-              <td>{{thread.content}}</td>
               {{#If_Logged_In}}
                 <td><a href="{{pathFor 'Edit_Stuff_Page' _id=thread._id}}">Edit</a></td>
               {{/If_Logged_In}}
