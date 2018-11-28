@@ -13,6 +13,11 @@ body {
   box-shadow: none;
 }
 
+.ui.middle.aligned.centered.grid.text.container {
+  width: 100%;
+  margin-bottom: 0;
+}
+
 .login-link-text {
   color: white !important;
 }
@@ -59,8 +64,17 @@ body {
   box-shadow: none;
   border: none;
 }
+
 .ui.text.container {
-  max-width: 1200px !important;
+  max-width: 3000px !important;
   padding-left: 0;
   padding-right: 0;
+}
+
+.ui.grid.container {
+  width: 100% !important;
+}
+
+.ui.container {
+  width: 100% !important;
 }
