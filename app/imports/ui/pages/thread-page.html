@@ -1,14 +1,20 @@
 <template name="Thread_Page">
-  <h3>{{getDoc.title}}</h3>
-  <div class="ui two column grid">
-    <div class="column">
-      <!--thread information-->
-      <p>Author: {{getDoc.author}} </p>
-      <p>Date: {{getDoc.date}} </p>
+  <div class="ui two column grid" id="threadgrid">
+    <div class="row">
+      <div class="column">
+        <h3>{{getDoc.title}}</h3>
+      </div>
     </div>
-    <div class="column">
-      <!--thread content-->
-      {{getDoc.content}}
+    <div class="row">
+      <div class="four wide column">
+        <!--thread information-->
+        <p>Author: {{getDoc.author}} </p>
+        <p>Date: {{getDoc.date}} </p>
+      </div>
+      <div class="nine wide column">
+        <!--thread content-->
+        {{getDoc.content}}
+      </div>
     </div>
   </div>
 </template>

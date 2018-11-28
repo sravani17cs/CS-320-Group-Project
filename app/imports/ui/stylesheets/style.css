@@ -80,3 +80,14 @@ body {
 .ui.container {
   width: 100% !important;
 }
+
+#threadgrid {
+  background-color: white;
+  width: 100% !important;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
