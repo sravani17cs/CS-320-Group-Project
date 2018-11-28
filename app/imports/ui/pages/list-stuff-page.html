@@ -1,0 +1,35 @@
+<template name="List_Stuff_Page">
+    <div class="ui text container">
+      {{#if Template.subscriptionsReady}}
+        <table style="margin-top: 20px" class="ui celled table">
+          <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date Posted</th>
+            <th>Content (temp for now)</th>
+            {{#If_Logged_In}}
+              <th>Edit</th>
+            {{/If_Logged_In}}
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each thread in threadList}}
+            <tr>
+              <td>{{thread.title}}</td>
+              <td>{{thread.author}}</td>
+              <td>{{thread.date}}</td>
+              <td>{{thread.content}}</td>
+              {{#If_Logged_In}}
+                <td><a href="{{pathFor 'Edit_Stuff_Page' _id=thread._id}}">Edit</a></td>
+              {{/If_Logged_In}}
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      {{else}}
+        {{> Loading}}
+      {{/if}}
+    </div>
+</template>

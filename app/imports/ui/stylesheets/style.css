@@ -1,0 +1,66 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: #b6986d;
+}
+
+.header-menu {
+  background-color: tan;
+  margin: 0;
+  padding-top: 5px;
+  height: 45px;
+  box-shadow: none;
+}
+
+.login-link-text {
+  color: white !important;
+}
+
+.ui.positive.buttons .button, .ui.positive.button {
+  color: black;
+  background-color: lightgray;
+}
+
+.ui.positive.buttons .button:hover, .ui.positive.button:hover {
+  color: white;
+  background-color: gray;
+}
+
+#EditThreadForm > div, #AddThreadForm > div {
+  padding: 1em 0 0;
+}
+
+#EditThreadForm > div > div:nth-child(2),
+#EditThreadForm > div > div:nth-child(3),
+#EditThreadForm > div > div:nth-child(5),
+#EditThreadForm > div > div:nth-child(6),
+#AddThreadForm > div > div:nth-child(2),
+#AddThreadForm > div > div:nth-child(3),
+#AddThreadForm > div > div:nth-child(5),
+#AddSThreadForm > div > div:nth-child(6) {
+  display: inline-block !important;
+  width: 49.6% !important;
+}
+
+#EditThreadForm > div > div:first-child, #AddThreadForm > div > div:first-child {
+  background-color: white;
+  padding-left: 0;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+#EditThreadForm > div:last-child, #AddThreadForm > div:last-child {
+  padding-top: 0;
+}
+
+.ui.segment {
+  box-shadow: none;
+  border: none;
+}
+.ui.text.container {
+  max-width: 1200px !important;
+  padding-left: 0;
+  padding-right: 0;
+}
