@@ -26,7 +26,7 @@
               <td>{{thread.author}}</td>
               <td>{{thread.date}}</td>
               {{#If_Logged_In}}
-                <td><a href="{{pathFor 'Edit_Stuff_Page' _id=thread._id}}">Edit</a></td>
+                  <td><a href="{{pathFor 'Edit_Stuff_Page' _id=thread._id}}">Edit</a></td>
               {{/If_Logged_In}}
             </tr>
           {{/each}}
