@@ -19,7 +19,8 @@ AutoForm.hooks({
 
     before: {
       insert: function(doc) {
-        doc.date = new Date();
+        let date1 = new Date();
+        doc.date = date1.toLocaleString();
         doc.owner = Meteor.userId();
         doc.author = Meteor.user().username;
         return doc;

@@ -62,6 +62,21 @@ body {
   padding-top: 0;
 }
 
+#login-dropdown-list {
+  background-color: tan;
+  border: black;
+  border-style: inset;
+  borderiwdth: 2px;
+  margin-right: -5px;
+}
+
+#login-buttons-password,
+#login-buttons-do-change-password,
+#login-buttons-open-change-password,
+#login-buttons-logout {
+  background-color: darkred !important;
+}
+
 .ui.segment {
   box-shadow: none;
   border: none;
