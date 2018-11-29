@@ -16,6 +16,16 @@ AutoForm.hooks({
      * @param formType The form.
      * @param result The result of form submission.
      */
+
+    before: {
+      insert: function(doc) {
+        doc.date = new Date();
+        doc.owner = Meteor.userId();
+        doc.author = Meteor.user().username;
+        return doc;
+      },
+    },
+
     onSuccess: function onSuccess(formType, result) {
       FlowRouter.go('List_Stuff_Page');
     },

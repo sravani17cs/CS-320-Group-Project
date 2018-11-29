@@ -30,19 +30,25 @@ export const ThreadSchema = new SimpleSchema({
   author: {
     label: 'Author',
     type: String,
-    optional: false,
+    optional: true,
     autoform: {
       group: 'Thread',
-      placeholder: 'Author',
     },
   },
   date: {
     label: 'Date',
     type: String,
-    optional: false,
+    optional: true,
     autoform: {
       group: 'Thread',
-      placeholder: 'Date',
+    },
+  },
+  owner: {
+    label: 'Owner',
+    type: String,
+    optional: true,
+    autoform: {
+      group: 'Thread',
     },
   },
 });
