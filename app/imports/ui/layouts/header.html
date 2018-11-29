@@ -1,10 +1,11 @@
 <template name="Header">
-    <div style=" margin: 0px; border-radius: 0px; background-color: tan;border: double black;" kclass="ui borderless header-menu menu">
-        <div class="ui container" style="width: 330px !important;margin-left: 0 !important;">
-            <a class="item" href="{{pathFor 'Home_Page'}}"><h1 style="color: black;font-family: Calligraphic;font-size: x-large;margin-right: 0 !important;">Job Hunter</h1></a>
+    <div style=" margin: 0px; border-radius: 0px; background-color: tan;border: double black;" kclass="ui header-menu menu">
+        <div class="ui container" style="width: 100% !important;margin-left: 0 !important;">
+            <a class="item" href="{{pathFor 'Home_Page'}}"><h1 style="color: black;font-family: Calligraphic;font-size: x-large;margin-right: 0 !important;width: 200px !important">Job Hunter</h1></a>
+
+            <div class="ui right container" style="margin-bottom: 2px;text-align: right">
+              <a href="#" class="right aligned item" style="background-color: darkred;border: inset black;">{{> loginButtons align="right"}} </a>
+            </div>
         </div>
-       <div class="ui right container" style="margin-bottom: 2px">
-            <a href="#" class="right aligned item" style="background-color: darkred;border: inset black;">{{> loginButtons align="right"}} </a>
-         </div>
     </div>
 </template>
