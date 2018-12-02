@@ -1,6 +1,6 @@
 <template name="Thread_Page">
-  <div class="ui two column grid" id="threadgrid">
-    <div class="row">
+  <div style="border: inset black;" class="ui two column grid" id="threadgrid">
+    <div style="border-bottom: inset black;background-color: darkred;color: white" class="row">
       <div class="column">
         <h3>{{getDoc.title}}</h3>
       </div>
@@ -12,9 +12,11 @@
         <p>Date: {{getDoc.date}} </p>
         {{#If_Logged_In}}
           {{#if isOwner}}
-            <p><button class="edit">Edit</button> <button class="delete">Delete</button></p>
+            <p><button style="border: 2px inset black;color: white;background-color: darkred;" class="edit">Edit</button>
+              <button  style="border: 2px inset black;color: white;background-color: darkred;" class="delete">Delete</button>
+            </p>
           {{/if}}
-            <p><button class="reply">Reply</button></p>
+            <p><button style="border: 2px inset black;color: white;background-color: darkred;" class="reply">Reply</button></p>
         {{/If_Logged_In}}
       </div>
       <div class="nine wide column">
@@ -27,7 +29,7 @@
     <div class="ui two column grid" id="replygrid">
       {{#each reply in replyList}}
         <div class="separator"></div>
-        <div style="padding-top: 20px" class="row">
+        <div style="border: inset black;padding-top: 20px" class="row">
           <div class="four wide column">
             <p>Author: {{reply.author}}</p>
             <p>Date: {{reply.date}}</p>
