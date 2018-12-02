@@ -19,6 +19,26 @@ Template.Thread_Page.events({
     let doc = Thread.findOne(FlowRouter.getParam('_id'));
     FlowRouter.go('Add_Reply_Page', { _id: doc._id });
   },
+  'click .editReply'(event, instance) {
+    let replyID = event.currentTarget.id;
+    FlowRouter.go('Edit_Reply_Page', { _id: replyID });
+    /* let currReply = Reply.findOne(replyID);
+    if (currReply.owner === Meteor.userID()) {
+      FlowRouter.go('Edit_Reply_Page', {id: replyID});
+    } else {
+      FlowRouter.go('Not_Authorized_Page');
+    } */
+  },
+  'click .deleteReply'(event, instance) {
+    let replyID = event.currentTarget.id;
+    Reply.remove(replyID);
+    /* let currReply = Reply.findOne(replyID);
+    if (currReply.owner === Meteor.userID()) {
+      Reply.remove(replyID);
+    } else {
+      FlowRouter.go('Not_Authorized_Page');
+    } */
+  },
 });
 
 Template.Thread_Page.helpers({

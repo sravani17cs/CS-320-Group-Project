@@ -25,7 +25,6 @@
       </div>
     </div>
   </div>
-  {{#if Template.subscriptionsReady}}
     <div class="ui two column grid" id="replygrid">
       {{#each reply in replyList}}
         <div class="separator"></div>
@@ -33,6 +32,11 @@
           <div class="four wide column">
             <p>Author: {{reply.author}}</p>
             <p>Date: {{reply.date}}</p>
+            {{#If_Logged_In}}
+                <p><button style="border: 2px inset black;color: white;background-color: darkred;" class="editReply" id="{{reply._id}}">Edit</button>
+                  <button  style="border: 2px inset black;color: white;background-color: darkred;" class="deleteReply" id="{{reply._id}}">Delete</button>
+                </p>
+            {{/If_Logged_In}}
           </div>
           <div class="nine wide column">
             {{reply.content}}
@@ -40,7 +44,4 @@
         </div>
       {{/each}}
     </div>
-  {{else}}
-    {{> Loading}}
-  {{/if}}
 </template>

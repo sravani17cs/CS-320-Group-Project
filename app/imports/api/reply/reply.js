@@ -1,7 +1,3 @@
-/* This whole page is experimental, we might find a better way to do replies later,
-it's just something I'm fiddling around with. -Lauren
- */
-
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
@@ -53,5 +49,13 @@ export const ReplySchema = new SimpleSchema({
     },
   },
 });
+
+/* Failed code, commenting out in case I figure out how to make collection helpers work later -Lauren
+Reply.helpers({
+  isReplyOwner() {
+    console.log("I am trying");
+    return (this.owner === Meteor.userID());
+  },
+}); */
 
 Reply.attachSchema(ReplySchema);
