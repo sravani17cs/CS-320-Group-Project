@@ -104,13 +104,21 @@ body {
   padding-bottom: 20px;
   margin-top: 20px;
   margin-left: 0px;
-  margin-bottom: 20px;
 }
 
 #replygrid {
   background-color: white;
   margin-left: 50px;
   margin-bottom: 20px;
+  margin-right: 0px;
+}
+
+.separator {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  padding-top: 20px;
+  background-color: #b6986d;
 }
 
 
