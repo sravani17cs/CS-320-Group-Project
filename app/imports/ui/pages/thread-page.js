@@ -4,6 +4,14 @@ import { Thread } from '../../api/thread/thread.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
+Template.Thread_Page.events({
+  'click .delete'() {
+    let doc = Thread.findOne(FlowRouter.getParam('_id'));
+    Thread.remove(doc._id);
+    FlowRouter.go('List_Stuff_Page');
+  },
+});
+
 Template.Thread_Page.helpers({
   getDoc() {
     return Thread.findOne(FlowRouter.getParam('_id'));
