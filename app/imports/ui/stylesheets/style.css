@@ -3,7 +3,6 @@ body {
   margin-left: 200px;
   margin-right: 200px;
   background-color: #b6986d;
-  border: double black;
 }
 
 .header-menu {
@@ -39,6 +38,10 @@ body {
   padding: 1em 0 0;
 }
 
+#__blaze-root {
+  border: double black !important;
+}
+
 #EditThreadForm > div > div:nth-child(2),
 #EditThreadForm > div > div:nth-child(3),
 #EditThreadForm > div > div:nth-child(5),
@@ -66,10 +69,10 @@ body {
 #AddThreadForm > div > div:nth-child(2) {
   padding-top: 10px;
 }
+
 #login-dropdown-list {
   background-color: tan;
-  border: black;
-  border-style: inset;
+  border: inset black;
   borderiwdth: 2px;
   margin-right: -5px;
 }
