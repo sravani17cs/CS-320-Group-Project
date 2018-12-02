@@ -10,6 +10,11 @@
         <!--thread information-->
         <p>Author: {{getDoc.author}} </p>
         <p>Date: {{getDoc.date}} </p>
+        {{#If_Logged_In}}
+          {{#if isOwner}}
+            <p><a href="{{pathFor 'Edit_Stuff_Page' _id=getDoc._id}}">Edit</a></p>
+          {{/if}}
+        {{/If_Logged_In}}
       </div>
       <div class="nine wide column">
         <!--thread content-->

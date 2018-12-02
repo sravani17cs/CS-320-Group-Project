@@ -8,6 +8,10 @@ Template.Thread_Page.helpers({
   getDoc() {
     return Thread.findOne(FlowRouter.getParam('_id'));
   },
+  isOwner() {
+    let doc = Thread.findOne(FlowRouter.getParam('_id'));
+    return ( doc.owner === Meteor.userId() );
+  },
   threadCollection() {
     return Thread;
   },
