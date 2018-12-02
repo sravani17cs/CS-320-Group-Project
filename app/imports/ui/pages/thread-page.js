@@ -5,6 +5,10 @@ import { Thread } from '../../api/thread/thread.js';
 /* eslint-disable object-shorthand, no-unused-vars */
 
 Template.Thread_Page.events({
+  'click .edit'() {
+    let doc = Thread.findOne(FlowRouter.getParam('_id'));
+    FlowRouter.go('Edit_Stuff_Page', { _id: doc._id });
+  },
   'click .delete'() {
     let doc = Thread.findOne(FlowRouter.getParam('_id'));
     Thread.remove(doc._id);
