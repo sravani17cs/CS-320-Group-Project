@@ -45,6 +45,11 @@ body {
 
 #__blaze-root {
   border: double black !important;
+  background: tan;
+}
+
+.separator {
+  background: tan;
 }
 
 #EditThreadForm > div > div:nth-child(2),
