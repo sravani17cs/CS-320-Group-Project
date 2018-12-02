@@ -43,14 +43,14 @@ FlowRouter.route('/addreply/:_id', {
   },
 });
 
-FlowRouter.route('/notauthorized', {
+FlowRouter.route('/notauthorized/:_id', {
   name: 'Not_Authorized_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Not_Authorized_Page' });
   },
 });
 
-FlowRouter.route('/editreply/:_id', {
+FlowRouter.route('/editreply/:_id/:_id2', {
   name: 'Edit_Reply_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Reply_Page' });

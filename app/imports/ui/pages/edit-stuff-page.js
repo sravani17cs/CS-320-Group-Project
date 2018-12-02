@@ -11,11 +11,6 @@ import { Thread } from '../../api/thread/thread.js';
  */
 AutoForm.hooks({
   EditThreadForm: {
-    /**
-     * After successful form submission, go to List_Stuff_Page.
-     * @param formType The form.
-     * @param result The result of form submission.
-     */
     onSuccess: function onSuccess(formType, result) {
       let doc = Thread.findOne(FlowRouter.getParam('_id'));
       FlowRouter.go('Thread_Page', { _id: doc._id });

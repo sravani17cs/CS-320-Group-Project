@@ -21,6 +21,9 @@ AutoForm.hooks({
 });
 
 Template.Edit_Reply_Page.helpers({
+  getDoc() {
+    return Reply.findOne(FlowRouter.getParam('_id2'));
+  },
   replyCollection() {
     return Reply;
   },

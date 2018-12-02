@@ -20,24 +20,23 @@ Template.Thread_Page.events({
     FlowRouter.go('Add_Reply_Page', { _id: doc._id });
   },
   'click .editReply'(event, instance) {
+    let doc = Thread.findOne(FlowRouter.getParam('_id'));
     let replyID = event.currentTarget.id;
-    FlowRouter.go('Edit_Reply_Page', { _id: replyID });
-    /* let currReply = Reply.findOne(replyID);
-    if (currReply.owner === Meteor.userID()) {
-      FlowRouter.go('Edit_Reply_Page', {id: replyID});
+    let currReply = Reply.findOne(replyID);
+    if (currReply.owner === Meteor.userId()) {
+      FlowRouter.go('Edit_Reply_Page', {_id: doc._id, _id2: replyID});
     } else {
-      FlowRouter.go('Not_Authorized_Page');
-    } */
+      FlowRouter.go('Not_Authorized_Page', { _id: doc._id });
+    }
   },
   'click .deleteReply'(event, instance) {
     let replyID = event.currentTarget.id;
-    Reply.remove(replyID);
-    /* let currReply = Reply.findOne(replyID);
-    if (currReply.owner === Meteor.userID()) {
+    let currReply = Reply.findOne(replyID);
+    if (currReply.owner === Meteor.userId()) {
       Reply.remove(replyID);
     } else {
       FlowRouter.go('Not_Authorized_Page');
-    } */
+    }
   },
 });
 
