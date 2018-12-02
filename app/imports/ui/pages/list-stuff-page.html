@@ -1,21 +1,25 @@
 <template name="List_Stuff_Page">
+    <div style="margin-top: 15px;border: double black;background-color: tan" class="ui text container">
+      <p>Hello and Welcome to the site!</p>
+      <p>This site is used to post about job searching related topics, such as where to look, up coming internships to participate in,
+        or if people hiring have any positions available. People hiring are also encouraged to post so those looking can find a job
+      more easier.</p>
+    </div>
+
     <div class="ui text container">
       <div class="right item" style="text-align: right;padding-top: 15px">
         {{#if currentUser}}
-          <a style="border: inset black;background-color: darkred;color: white" class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Thread</a>
+          <a style="border: 2px inset black;background-color: darkred;color: white" class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Thread</a>
         {{/if}}
       </div>
 
       {{#if Template.subscriptionsReady}}
-        <table style="margin-top: 20px" class="ui celled table">
+        <table style="margin-top: 20px;border: 5px groove;border: darkred" class="ui celled table">
           <thead>
           <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Date Posted</th>
-            {{#If_Logged_In}}
-              <th>Edit</th>
-            {{/If_Logged_In}}
+            <th style="background-color: darkred;color: white">Title</th>
+            <th style="background-color: darkred;color: white">Author</th>
+            <th style="background-color: darkred;color: white">Date Posted</th>
           </tr>
           </thead>
 
@@ -25,9 +29,6 @@
               <td><a href="{{pathFor 'Thread_Page' _id=thread._id}}">{{thread.title}}</a></td>
               <td>{{thread.author}}</td>
               <td>{{thread.date}}</td>
-              {{#If_Logged_In}}
-                  <td><a href="{{pathFor 'Edit_Stuff_Page' _id=thread._id}}">Edit</a></td>
-              {{/If_Logged_In}}
             </tr>
           {{/each}}
           </tbody>

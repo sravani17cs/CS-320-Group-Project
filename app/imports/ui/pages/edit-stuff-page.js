@@ -17,7 +17,8 @@ AutoForm.hooks({
      * @param result The result of form submission.
      */
     onSuccess: function onSuccess(formType, result) {
-      FlowRouter.go('List_Stuff_Page');
+      let doc = Thread.findOne(FlowRouter.getParam('_id'));
+      FlowRouter.go('Thread_Page', { _id: doc._id });
     },
   },
 });

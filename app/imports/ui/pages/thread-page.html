@@ -1,6 +1,6 @@
 <template name="Thread_Page">
-  <div class="ui two column grid" id="threadgrid">
-    <div class="row">
+  <div style="border: inset black;" class="ui two column grid" id="threadgrid">
+    <div style="border-bottom: inset black;background-color: darkred;color: white" class="row">
       <div class="column">
         <h3>{{getDoc.title}}</h3>
       </div>
@@ -10,6 +10,14 @@
         <!--thread information-->
         <p>Author: {{getDoc.author}} </p>
         <p>Date: {{getDoc.date}} </p>
+        {{#If_Logged_In}}
+          {{#if isOwner}}
+            <p><button style="border: 2px inset black;color: white;background-color: darkred;" class="edit">Edit</button>
+              <button  style="border: 2px inset black;color: white;background-color: darkred;" class="delete">Delete</button>
+            </p>
+          {{/if}}
+            <p><button style="border: 2px inset black;color: white;background-color: darkred;" class="reply">Reply</button></p>
+        {{/If_Logged_In}}
       </div>
       <div class="nine wide column">
         <!--thread content-->
@@ -17,4 +25,22 @@
       </div>
     </div>
   </div>
+  {{#if Template.subscriptionsReady}}
+    <div class="ui two column grid" id="replygrid">
+      {{#each reply in replyList}}
+        <div class="separator"></div>
+        <div style="border: inset black;padding-top: 20px" class="row">
+          <div class="four wide column">
+            <p>Author: {{reply.author}}</p>
+            <p>Date: {{reply.date}}</p>
+          </div>
+          <div class="nine wide column">
+            {{reply.content}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    {{> Loading}}
+  {{/if}}
 </template>

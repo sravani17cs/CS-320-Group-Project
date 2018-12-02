@@ -36,6 +36,13 @@ FlowRouter.route('/thread/:_id', {
   },
 });
 
+FlowRouter.route('/addreply/:_id', {
+  name: 'Add_Reply_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Reply_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
