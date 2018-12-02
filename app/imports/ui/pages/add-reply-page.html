@@ -1,0 +1,14 @@
+<template name="Add_Reply_Page">
+  {{#If_Logged_In}}
+    <div style="padding-top: 20px" class="ui text container">
+      {{> quickForm
+          collection=replyCollection
+          template="semanticUI"
+          id="AddReplyForm"
+          omitFields="date,author,owner,threadID"
+          type="insert"
+          resetOnSuccess=true
+      }}
+    </div>
+  {{/If_Logged_In}}
+</template>

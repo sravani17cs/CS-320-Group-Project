@@ -23,4 +23,21 @@
       </div>
     </div>
   </div>
+  {{#if Template.subscriptionsReady}}
+    <div class="ui two column grid" id="replygrid">
+      {{#each reply in replyList}}
+        <div class="row">
+          <div class="three wide column">
+            <p>Author: {{reply.author}}</p>
+            <p>Date: {{reply.date}}</p>
+          </div>
+          <div class="six wide column">
+            {{reply.content}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    {{> Loading}}
+  {{/if}}
 </template>

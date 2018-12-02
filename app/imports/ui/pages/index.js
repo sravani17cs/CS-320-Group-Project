@@ -11,3 +11,6 @@ import './list-stuff-page.js';
 
 import './thread-page.html';
 import './thread-page.js';
+
+import './add-reply-page.html';
+import './add-reply-page.js';
