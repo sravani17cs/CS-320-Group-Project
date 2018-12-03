@@ -14,3 +14,9 @@ import './thread-page.js';
 
 import './add-reply-page.html';
 import './add-reply-page.js';
+
+import './edit-reply-page.html';
+import './edit-reply-page.js';
+
+import './not-authorized-page.html';
+import './not-authorized-page.js';

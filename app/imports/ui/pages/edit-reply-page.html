@@ -1,0 +1,15 @@
+<template name="Edit_Reply_Page">
+  {{#If_Logged_In}}
+    <div style="padding-top: 20px" class="ui text container">
+      {{> quickForm
+          collection=replyCollection
+          template="semanticUI"
+          id="EditReplyForm"
+          omitFields="date,author,owner,threadID"
+          type="update"
+          doc=getDoc
+          buttonContent="Edit"
+      }}
+    </div>
+  {{/If_Logged_In}}
+</template>

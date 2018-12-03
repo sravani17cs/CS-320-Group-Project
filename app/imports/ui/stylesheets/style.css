@@ -47,6 +47,11 @@ body {
 
 #__blaze-root {
   border: double black !important;
+  background: tan;
+}
+
+.separator {
+  background: tan;
 }
 
 #EditThreadForm > div > div:nth-child(2),
@@ -150,7 +155,7 @@ body {
   margin-right: 0px;
   width: 100%;
   padding-top: 20px;
-  background-color: #b6986d;
+  /*background-color: #b6986d;*/
 }
 
 
