@@ -33,9 +33,11 @@
             <p>Author: {{reply.author}}</p>
             <p>Date: {{reply.date}}</p>
             {{#If_Logged_In}}
-                <p><button style="border: 2px inset black;color: white;background-color: darkred;" class="editReply" id="{{reply._id}}">Edit</button>
-                  <button style="border: 2px inset black;color: white;background-color: darkred;" class="deleteReply" id="{{reply._id}}">Delete</button>
-                </p>
+              {{#if reply.isReplyOwner}}
+                  <p><button style="border: 2px inset black;color: white;background-color: darkred;" class="editReply" id="{{reply._id}}">Edit</button>
+                    <button style="border: 2px inset black;color: white;background-color: darkred;" class="deleteReply" id="{{reply._id}}">Delete</button>
+                  </p>
+                {{/if}}
             {{/If_Logged_In}}
           </div>
           <div class="nine wide column">

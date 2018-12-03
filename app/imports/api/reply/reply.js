@@ -3,6 +3,12 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 export const Reply = new Mongo.Collection('Reply');
 
+Reply.helpers({
+  isReplyOwner() {
+    return (this.owner === Meteor.userId());
+  },
+});
+
 export const ReplySchema = new SimpleSchema({
   threadID: {
     label: 'Thread_ID',
@@ -49,13 +55,5 @@ export const ReplySchema = new SimpleSchema({
     },
   },
 });
-
-/* Failed code, commenting out in case I figure out how to make collection helpers work later -Lauren
-Reply.helpers({
-  isReplyOwner() {
-    console.log("I am trying");
-    return (this.owner === Meteor.userID());
-  },
-}); */
 
 Reply.attachSchema(ReplySchema);
