@@ -57,7 +57,6 @@ Template.Thread_Page.helpers({
   },
   replyOwner() {
     let doc = Reply.findOne(FlowRouter.getParam('_id'));
-    console.log(doc.owner);
     return ( doc.owner === Meteor.userId() );
   },
 });
