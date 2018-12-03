@@ -2,11 +2,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin-left: 100px;
   margin-right: 100px;
-  background-image: url(../images/newyork.jpg) ;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
+    background-image: url(http://demos.jquerymobile.com/1.4.5/_assets/img/newyork.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 
 .header-menu {
   background-color: tan;
