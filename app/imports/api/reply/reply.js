@@ -54,6 +54,14 @@ export const ReplySchema = new SimpleSchema({
       group: 'Reply',
     },
   },
+  editStamp: {
+    label: 'Edit_Stamp',
+    type: String,
+    optional: true,
+    autoform: {
+      group: 'Reply',
+    },
+  },
 });
 
 Reply.attachSchema(ReplySchema);

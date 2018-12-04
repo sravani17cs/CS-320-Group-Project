@@ -51,6 +51,14 @@ export const ThreadSchema = new SimpleSchema({
       group: 'Thread',
     },
   },
+  editStamp: {
+    label: 'Edit_Stamp',
+    type: String,
+    optional: true,
+    autoform: {
+      group: 'Thread',
+    },
+  },
 });
 
 Thread.attachSchema(ThreadSchema);

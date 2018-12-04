@@ -13,6 +13,15 @@ import { Reply } from '../../api/reply/reply.js';
 AutoForm.hooks({
   EditReplyForm: {
 
+    before: {
+      update: function(doc) {
+        let dateStamp = new Date();
+        let editMsg = "Edited @ ";
+        doc.$set.editStamp = editMsg.concat(dateStamp.toLocaleString());
+        return doc;
+      },
+    },
+
     onSuccess: function onSuccess(formType, result) {
       let doc = Thread.findOne(FlowRouter.getParam('_id'));
       FlowRouter.go('Thread_Page', { _id: doc._id });

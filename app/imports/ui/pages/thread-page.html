@@ -21,7 +21,8 @@
       </div>
       <div class="nine wide column">
         <!--thread content-->
-        {{getDoc.content}}
+        <p>{{getDoc.content}}</p>
+        <p><i>{{getDoc.editStamp}}</i></p>
       </div>
     </div>
   </div>
@@ -41,7 +42,8 @@
             {{/If_Logged_In}}
           </div>
           <div class="nine wide column">
-            {{reply.content}}
+            <p>{{reply.content}}</p>
+            <p><i>{{reply.editStamp}}</i></p>
           </div>
         </div>
       {{/each}}

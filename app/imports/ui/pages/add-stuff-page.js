@@ -23,6 +23,7 @@ AutoForm.hooks({
         doc.date = date1.toLocaleString();
         doc.owner = Meteor.userId();
         doc.author = Meteor.user().username;
+        doc.editStamp = "";
         return doc;
       },
     },
