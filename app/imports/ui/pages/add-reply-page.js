@@ -22,6 +22,7 @@ AutoForm.hooks({
         doc.owner = Meteor.userId();
         doc.author = Meteor.user().username;
         doc.editStamp = "";
+        console.log(doc.content);
         return doc;
       },
     },

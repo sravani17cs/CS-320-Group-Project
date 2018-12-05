@@ -24,9 +24,9 @@ export const ReplySchema = new SimpleSchema({
     label: 'Content',
     type: String,
     optional: false,
-    max: 500,
     autoform: {
       group: 'Reply',
+      type: 'textarea',
       placeholder: 'Reply Content',
     },
   },

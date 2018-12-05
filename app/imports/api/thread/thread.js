@@ -21,9 +21,9 @@ export const ThreadSchema = new SimpleSchema({
     label: 'Content',
     type: String,
     optional: false,
-    max: 500,
     autoform: {
       group: 'Thread',
+      type: 'textarea',
       placeholder: 'Thread Content',
     },
   },
