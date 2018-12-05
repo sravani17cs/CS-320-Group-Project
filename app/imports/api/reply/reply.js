@@ -7,6 +7,9 @@ Reply.helpers({
   isReplyOwner() {
     return (this.owner === Meteor.userId());
   },
+  patchLeak() {
+
+  },
 });
 
 export const ReplySchema = new SimpleSchema({
