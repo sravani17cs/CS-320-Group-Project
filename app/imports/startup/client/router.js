@@ -57,6 +57,14 @@ FlowRouter.route('/editreply/:_id/:_id2', {
   },
 });
 
+/* experimental code */
+FlowRouter.route('/user/:_id', {
+  name: 'User_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'User_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });

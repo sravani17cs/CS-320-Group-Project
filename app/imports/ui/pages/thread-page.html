@@ -8,7 +8,7 @@
     <div class="row">
       <div class="four wide column">
         <!--thread information-->
-        <p>Author: {{getDoc.author}} </p>
+        <p>Author: <a href="{{pathFor 'User_Page' _id=getDoc.owner}}">{{getDoc.author}}</a></p>
         <p>Date: {{getDoc.date}} </p>
         {{#If_Logged_In}}
           {{#if isOwner}}
@@ -31,7 +31,7 @@
         <div class="separator"></div>
         <div style="border: inset black;padding-top: 20px" class="row">
           <div class="four wide column">
-            <p>Author: {{reply.author}}</p>
+            <p>Author: <a href="{{pathFor 'User_Page' _id=reply.owner}}">{{reply.author}}</a></p>
             <p>Date: {{reply.date}}</p>
             {{#If_Logged_In}}
               {{#if reply.isReplyOwner}}

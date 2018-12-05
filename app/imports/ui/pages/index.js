@@ -20,3 +20,6 @@ import './edit-reply-page.js';
 
 import './not-authorized-page.html';
 import './not-authorized-page.js';
+
+import './user-page.html';
+import './user-page.js';

@@ -1,0 +1,48 @@
+<template name="User_Page">
+  <div style="margin-top: 0px;border: double black;background-color: tan" class="ui text container">
+    <h2>User: {{getUser.username}}</h2>
+  </div>
+
+  <div class="ui text container">
+    <h3 style="padding-top: 20px">Threads by This User</h3>
+    {{#if Template.subscriptionsReady}}
+      <table style="margin-top: 20px;border: 5px groove;border: darkred" class="ui celled table">
+        <thead>
+        <tr>
+          <th style="background-color: darkred;color: white">Title</th>
+          <th style="background-color: darkred;color: white">Date Posted</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each thread in threadList}}
+          <tr>
+            <td><a href="{{pathFor 'Thread_Page' _id=thread._id}}">{{thread.title}}</a></td>
+            <td>{{thread.date}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+      <h3>Replies by This User</h3>
+      <table style="margin-top: 20px;border: 5px groove;border: darkred" class="ui celled table">
+        <thead>
+        <tr>
+          <th style="background-color: darkred;color: white">Reply</th>
+          <th style="background-color: darkred;color: white">Date Posted</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each reply in replyList}}
+          <tr>
+            <td><a href="{{pathFor 'Thread_Page' _id=reply.threadID}}">Link to Thread</a></td>
+            <td>{{reply.date}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    {{else}}
+      {{> Loading}}
+    {{/if}}
+  </div>
+</template>
