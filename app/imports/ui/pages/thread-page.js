@@ -12,6 +12,12 @@ Template.Thread_Page.events({
   },
   'click .delete'() {
     let doc = Thread.findOne(FlowRouter.getParam('_id'));
+    let thisReply = Reply.findOne({threadID: doc._id});
+    while (thisReply != undefined) {
+      thisReply = thisReply._id;
+      Reply.remove(thisReply);
+      thisReply = Reply.findOne({threadID: doc._id});
+    }
     Thread.remove(doc._id);
     FlowRouter.go('List_Stuff_Page');
   },
