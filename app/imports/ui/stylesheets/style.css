@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin-left: 100px;
@@ -150,3 +151,23 @@ body {
 }
 
 
+ul {
+  overflow: auto;
+}
+
+ul li {
+  list-style-type: none;
+  float: right;
+}
+
+ul li a i {
+  background: #205D7A;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 15%;
+}
