@@ -5,7 +5,4 @@ Team members: Lauren Scott
               Sravani Ravula 
               
               
-Current status of the project:   Design Stage : Just submited the the desiging part of the project which includes 
-                                                                1. Activity Diagrams
-                                                                2. Structural Modeling
-                                                                3. Behavior Modeling
+Current status of the project:   Completed implemtentation.
