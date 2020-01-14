@@ -1,4 +1,4 @@
-# CS-320-Group-Project: Job Hunter
+# Job Hunter
 A forum discussion board for talking about jobs.
 Team members: Lauren Scott                                          
               Joshua Sweet                                                         
