@@ -7,6 +7,6 @@ Team members:
               Joshua Sweet                                                         
               Sravani Ravula 
 
-Languages used: Mongo DB, Javascript, 
+Languages used: Mongo DB, Javascript, CSS, Json, 
 
 Current status of the project:   Completed implemtentation.
